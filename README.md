@@ -14,9 +14,9 @@ It uses **NPM Workspaces** for dependency management and **GitHub Actions** to d
 ```
 
 my-monorepo/
-├── apps/
-│   ├── react-app/        # React App with Storybook
-│   └── angular-app/      # Angular App with Storybook
+├── packages/
+│   ├── react-storybook/        # React App with Storybook
+│   └── angular-storybook/      # Angular App with Storybook
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml    # Deploy workflow for both apps
