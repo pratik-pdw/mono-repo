@@ -63,8 +63,8 @@ This monorepo pushes builds to two separate repositories:
 
 | App     | Repo                 | Deployed To                                             |
 | ------- | -------------------- | ------------------------------------------------------- |
-| React   | `react-app-deploy`   | [https://pratik-pdw.github.io/react-app-deploy](#)   |
-| Angular | `angular-app-deploy` | [https://pratik-pdw.github.io/angular-app-deploy](#) |
+| React   | [`react-app-deploy`](https://github.com/pratik-pdw/react-app-deploy)   | [https://pratik-pdw.github.io/react-app-deploy](https://pratik-pdw.github.io/react-app-deploy)   |
+| Angular | [`angular-app-deploy`](https://github.com/pratik-pdw/angular-app-deploy) | [https://pratik-pdw.github.io/angular-app-deploy](https://pratik-pdw.github.io/angular-app-deploy) |
 
 ### Trigger
 
