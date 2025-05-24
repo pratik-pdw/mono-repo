@@ -32,7 +32,6 @@ jobs:
           external_repository: pratik-pdw/react-app-deploy
           publish_branch: gh-pages
           publish_dir: apps/react-app/storybook-static
-          clean: true
 
   deploy-angular:
     name: Deploy Angular App
@@ -63,4 +62,3 @@ jobs:
           external_repository: pratik-pdw/angular-app-deploy
           publish_branch: gh-pages
           publish_dir: apps/angular-app/storybook-static
-          clean: true
