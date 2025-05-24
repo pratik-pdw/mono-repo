@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://pratik-pdw.github.io/react-app-deploy",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

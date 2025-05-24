@@ -57,7 +57,7 @@ jobs:
 
       - name: Build Angular App
         working-directory: apps/angular-app
-        run: ng build --output-path=dist/angular-app --base-href=/
+        run: ng build --output-path=dist/angular-app --base-href=/angular-app-deploy/
 
       - name: Deploy to Angular GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
