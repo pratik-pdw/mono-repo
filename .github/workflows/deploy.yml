@@ -1,0 +1,68 @@
+name: Deploy React and Angular to Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch
+
+jobs:
+  deploy-react:
+    name: Deploy React App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout mono-repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install React App Dependencies
+        working-directory: apps/react-app
+        run: npm install
+
+      - name: Build React App
+        working-directory: apps/react-app
+        run: npm run build
+
+      - name: Deploy to React GitHub Pages Repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: pratik-pdw/react-app-deploy
+          publish_branch: gh-pages
+          publish_dir: apps/react-app/build
+
+  deploy-angular:
+    name: Deploy Angular App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout mono-repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Install Angular App Dependencies
+        working-directory: apps/angular-app
+        run: npm install
+
+      - name: Build Angular App
+        working-directory: apps/angular-app
+        run: ng build --output-path=dist/angular-app --base-href=/
+
+      - name: Deploy to Angular GitHub Pages Repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: pratik-pdw/angular-app-deploy
+          publish_branch: gh-pages
+          publish_dir: apps/angular-app/dist/angular-app

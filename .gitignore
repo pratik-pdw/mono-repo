@@ -1,0 +1,8 @@
+node_modules
+dist
+
+!apps/angular-app/
+!apps/angular-app/**/*
+
+!apps/react-app/
+!apps/react-app/**/*
