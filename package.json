@@ -2,13 +2,13 @@
   "name": "my-monorepo",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "packages/*"
   ],
   "scripts": {
-    "sb-react": "npm run storybook --workspace=apps/react-app",
-    "sb-angular": "npm run storybook --workspace=apps/angular-app",
-    "sb-build-react": "npm run build-storybook --workspace=apps/react-app",
-    "sb-build-angular": "npm run build-storybook --workspace=apps/angular-app"
+    "sb-react": "npm run storybook --workspace=packages/react-storybook",
+    "sb-angular": "npm run storybook --workspace=packages/angular-storybook",
+    "sb-build-react": "npm run build-storybook --workspace=packages/react-storybook",
+    "sb-build-angular": "npm run build-storybook --workspace=packages/angular-storybook"
   },
   "devDependencies": {
     "storybook": "^8.6.14"

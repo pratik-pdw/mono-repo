@@ -31,7 +31,7 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: pratik-pdw/react-app-deploy
           publish_branch: gh-pages
-          publish_dir: apps/react-app/storybook-static
+          publish_dir: apps/react-storybook/storybook-static
 
   deploy-angular:
     name: Deploy Angular App
@@ -61,4 +61,4 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: pratik-pdw/angular-app-deploy
           publish_branch: gh-pages
-          publish_dir: apps/angular-app/storybook-static
+          publish_dir: apps/angular-storybook/storybook-static
