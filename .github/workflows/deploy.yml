@@ -33,7 +33,7 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: pratik-pdw/react-app-deploy
           publish_branch: gh-pages
-          publish_dir: apps/react-app/build
+          publish_dir: apps/react-app/dist
 
   deploy-angular:
     name: Deploy Angular App
@@ -57,7 +57,7 @@ jobs:
 
       - name: Build Angular App
         working-directory: apps/angular-app
-        run: ng build --output-path=dist/angular-app --base-href=/angular-app-deploy/
+        run: npm run build --base-href=/angular-app-deploy/
 
       - name: Deploy to Angular GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
