@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build React Storybook
-        run: npm run build-storybook --workspace=apps/react-app
+        run: npm run sb-build-react
 
       - name: Deploy to React GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
@@ -54,7 +54,7 @@ jobs:
         run: npm install
 
       - name: Build Angular Storybook
-        run: npm run build-storybook --workspace=apps/angular-app
+        run: npm run sb-build-angular
 
       - name: Deploy to Angular GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3

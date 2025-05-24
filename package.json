@@ -4,6 +4,12 @@
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "sb-react": "npm run storybook --workspace=apps/react-app",
+    "sb-angular": "npm run storybook --workspace=apps/angular-app",
+    "sb-build-react": "npm run build-storybook --workspace=apps/react-app",
+    "sb-build-angular": "npm run build-storybook --workspace=apps/angular-app"
+  },
   "devDependencies": {
     "storybook": "^8.6.14"
   }
