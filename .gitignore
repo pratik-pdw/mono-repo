@@ -6,3 +6,5 @@ dist
 
 !apps/react-app/
 !apps/react-app/**/*
+
+storybook-static

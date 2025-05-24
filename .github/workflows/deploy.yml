@@ -19,13 +19,11 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install React App Dependencies
-        working-directory: apps/react-app
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build React App
-        working-directory: apps/react-app
-        run: npm run build
+      - name: Build React Storybook
+        run: npm run build --workspace=apps/react-app
 
       - name: Deploy to React GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
@@ -33,7 +31,7 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: pratik-pdw/react-app-deploy
           publish_branch: gh-pages
-          publish_dir: apps/react-app/dist
+          publish_dir: apps/react-app/storybook-static
 
   deploy-angular:
     name: Deploy Angular App
@@ -51,13 +49,11 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
-      - name: Install Angular App Dependencies
-        working-directory: apps/angular-app
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build Angular App
-        working-directory: apps/angular-app
-        run: npm run build --base-href=/angular-app-deploy/
+      - name: Build Angular Storybook
+        run: npm run build --workspace=apps/angular-app
 
       - name: Deploy to Angular GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
@@ -65,4 +61,4 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: pratik-pdw/angular-app-deploy
           publish_branch: gh-pages
-          publish_dir: apps/angular-app/dist/angular-app
+          publish_dir: apps/angular-app/storybook-static

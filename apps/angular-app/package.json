@@ -1,12 +1,13 @@
 {
-  "name": "angular-app",
+  "name": "angular-latest",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "storybook": "ng run angular-latest:storybook",
+    "build-storybook": "ng run angular-latest:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -25,12 +26,15 @@
     "@angular-devkit/build-angular": "^19.2.13",
     "@angular/cli": "^19.2.13",
     "@angular/compiler-cli": "^19.2.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.6.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0"
+    "@compodoc/compodoc": "^1.1.26",
+    "@storybook/addon-docs": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/angular": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "storybook": "^8.6.14",
+    "typescript": "~5.7.2"
   }
 }
